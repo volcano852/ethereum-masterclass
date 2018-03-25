@@ -62,4 +62,27 @@ MetaMask is a chrome plugin (bridge)
 Store private keys and can sign transactions
 Does not download the chain data, discuss with the MetaMask server (and then we need to trust them :-) )
 
+## Difference between a call & a transaction
+
+Transaction:
+- published to the network
+- processed by miners
+- if valid miners publish it on the blockchain
+- Is a write transaction(update the state, use ether (gas))
+- Asynchronous operation: the result-value is the hash of the transaction (need to wait then until the transaction is mined)
+
+Call:
+- read only operation
+- local and free (does not consume gas)
+- synchronous (return value is returned immediately)
+- 'constant' keyword in a solidity contract
+
+Do contracts create transactions ?
+- Call (readonly): Local contract call (synchronous, cost no gas). Contract A calls Contracts B (synchronous, cost no gas)
+- Transactions (write): Contract direct invocation : OK. Contract A -> Contract B. Who is the caller ??
+Ethereum yellow paper says this is the same transaction. The same miner will work on the same transaction and one single return-value
+Transactions between contracts are mined within the same block and returned all together
+
+
+
 
