@@ -46,5 +46,20 @@ The smart contract on the block chain is a binary file
 
 When a smart contract is deployed: you cannot change (immutable block chain)
 
+## Blockchain nodes
+
+Geth (written in go), Ethereum-Cpp, Parity (written in Rust), MetaMask (Chrome plug in bridge)
+Simulation of Ethereum protocol : EthereumJs-TestRPC to unit test smart contracts. Mining is simulated
+Full nodes vs Light client
+Full nodes download the whole blockchain vs Light client download only the headers
+
+starting geth open UDP port 30303.
+Will put an IPC file in the datadir directory for the other processes to communicate with geth
+
+EthereumJs-TestRPC installed by npm
+
+MetaMask is a chrome plugin (bridge)
+Store private keys and can sign transactions
+Does not download the chain data, discuss with the MetaMask server (and then we need to trust them :-) )
 
 
