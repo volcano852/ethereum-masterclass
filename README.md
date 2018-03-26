@@ -83,6 +83,20 @@ Do contracts create transactions ?
 Ethereum yellow paper says this is the same transaction. The same miner will work on the same transaction and one single return-value
 Transactions between contracts are mined within the same block and returned all together
 
+## Genesis.conf file
 
+difficulty: how difficult is it to mine a block
+gasLimit: any transaction to the transaction requires to pay gas to the miners. gasLimit defines the upper limit of the assembler opcodes miners are allowed to do. Still very hard to write complex code because of this limit
+nounce and mixHash defines the blockchain
+parentHash: sets to 0 for the first block
+alloc: could gives ether to pre defined accounts
+config.chainId: don't set to 1 because this is the mainnet
+
+should create an empty directory called 'chaindata' to host the block chain
+
+1. Initialize the private blockchain
+geth --datadir=./chaindata/ init ./genesis.json 
+2. Start geth with the new blockchain
+geth --datadir=./chaindata/
 
 
