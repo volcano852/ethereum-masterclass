@@ -99,4 +99,16 @@ geth --datadir=./chaindata/ init ./genesis.json
 2. Start geth with the new blockchain
 geth --datadir=./chaindata/
 
+## Ganache-CLI
+
+install ganache-cli : npm install -g ganache-cli
+ganache-cli: creates 10 accounts and shows the private keys, add 100 ether to each account, displays mnemonic and runs http server
+ganache-cli -m "weasel champion mountain carry number spawn tissue ten basic mom ritual mechanic"
+
+## Web3.js and the communication between the browser and geth
+
+run geth with CORS:
+geth --datadir=./chaindata/ console --rpc --rpccorsdomain "*"
+Web3.js abstracts the JsonRPC.It does the encoding/decoding automatically. Of course ethereum client must be running (geth or ganache) 
+
 
