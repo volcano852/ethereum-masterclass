@@ -111,4 +111,11 @@ run geth with CORS:
 geth --datadir=./chaindata/ console --rpc --rpccorsdomain "*"
 Web3.js abstracts the JsonRPC.It does the encoding/decoding automatically. Of course ethereum client must be running (geth or ganache) 
 
-
+## Mist & Ethereum wallet
+Mist is an electron app which starts geth on the background. It gives access to Web3 through the browsing option.
+Ehereum wallet is a DApp written in pure HTML/Js and uses Web3.js
+It can manage accounts and deploy new contracts. It runs inside MIST browser but can also run as a standalone product
+With MetaMask plugin in chrome wallet.ethereum.org runs inside Chrome
+run mist with private net on Mac
+run geth with private net : geth --datadir=....
+/Applications/Mist.app/Contents/MacOS/Mist --rpc /Users/fabien/Code/privateEth/chaindata/geth.ipc --node-networkid 1234 --node-datadir ~/Library/Ethereum/privatenet
