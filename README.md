@@ -26,7 +26,7 @@ Casper network will probably be a mix of PoW & PoS
 ## Smart contract
 
 Smart contract: turing complete code running on the blockchain
-- is a state machine
+- Is a state machine
 - Need transactions to change state. State change happens through mining through transactions
 - Can do logic operations
 
@@ -85,37 +85,56 @@ Transactions between contracts are mined within the same block and returned all 
 
 ## Genesis.conf file
 
-difficulty: how difficult is it to mine a block
-gasLimit: any transaction to the transaction requires to pay gas to the miners. gasLimit defines the upper limit of the assembler opcodes miners are allowed to do. Still very hard to write complex code because of this limit
-nounce and mixHash defines the blockchain
-parentHash: sets to 0 for the first block
-alloc: could gives ether to pre defined accounts
-config.chainId: don't set to 1 because this is the mainnet
+* difficulty: how difficult is it to mine a block
+* gasLimit: any transaction to the transaction requires to pay gas to the miners. gasLimit defines the upper limit of the assembler opcodes miners are allowed to do. Still very hard to write complex code because of this limit
+* nounce and mixHash defines the blockchain
+* parentHash: sets to 0 for the first block
+* alloc: could gives ether to pre defined accounts
+* config.chainId: don't set to 1 because this is the mainnet
 
 should create an empty directory called 'chaindata' to host the block chain
 
 1. Initialize the private blockchain
+```
 geth --datadir=./chaindata/ init ./genesis.json 
+```
 2. Start geth with the new blockchain
+```
 geth --datadir=./chaindata/
+```
 
 ## Ganache-CLI
 
-install ganache-cli : npm install -g ganache-cli
-ganache-cli: creates 10 accounts and shows the private keys, add 100 ether to each account, displays mnemonic and runs http server
+* install ganache-cli
+```
+npm install -g ganache-cli
+```
+**ganache-cli** creates 10 accounts and shows the private keys, adds 100 ether to each account, displays mnemonic and runs http server
+```
 ganache-cli -m "weasel champion mountain carry number spawn tissue ten basic mom ritual mechanic"
+```
 
 ## Web3.js and the communication between the browser and geth
 
 run geth with CORS:
+```
 geth --datadir=./chaindata/ console --rpc --rpccorsdomain "*"
-Web3.js abstracts the JsonRPC.It does the encoding/decoding automatically. Of course ethereum client must be running (geth or ganache) 
+```
+Web3.js abstracts the JsonRPC. It does the encoding/decoding automatically. Of course ethereum client must be running (geth or ganache) 
 
 ## Mist & Ethereum wallet
 Mist is an electron app which starts geth on the background. It gives access to Web3 through the browsing option.
-Ehereum wallet is a DApp written in pure HTML/Js and uses Web3.js
+
+**Ehereum wallet** is a DApp written in pure HTML/Js and uses Web3.js
 It can manage accounts and deploy new contracts. It runs inside MIST browser but can also run as a standalone product
 With MetaMask plugin in chrome wallet.ethereum.org runs inside Chrome
-run mist with private net on Mac
-run geth with private net : geth --datadir=....
+
+#### Run mist with private net on Mac
+* run geth with private net
+```
+geth --datadir=....
+```
+* run mist to use private net
+```
 /Applications/Mist.app/Contents/MacOS/Mist --rpc /Users/fabien/Code/privateEth/chaindata/geth.ipc --node-networkid 1234 --node-datadir ~/Library/Ethereum/privatenet
+```
