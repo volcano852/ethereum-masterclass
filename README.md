@@ -157,3 +157,21 @@ geth attach ipc:/Users/fabien/Code/privateEth/chaindata/geth.ipc
 miner.start(1);
 miner.stop();
 ```
+
+## MetaMask
+MetaMask is a chrome plugin which acts similarly to Mist except that there is no geth running in the background. It is a keystore for the private keys stored directly into the browser. 
+MetaMask calls data from infura.io which provides Blockchain as a Service.
+Makes it possible through an injected web3 object.
+
+## Remix
+Good for smart-contract development
+Can develop and deploy contracts. Does all the things an IDE can do (syntax highlighting, static analysis, gist contribution, debugging, ...)
+It provides an integrated simulated ethereum protocol
+
+## Truffle
+Development environment
+Provides smart contracts compilation
+* install truffle
+```
+npm install -g truffle
+```
