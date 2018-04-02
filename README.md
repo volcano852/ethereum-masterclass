@@ -129,12 +129,31 @@ Mist is an electron app which starts geth on the background. It gives access to 
 It can manage accounts and deploy new contracts. It runs inside MIST browser but can also run as a standalone product
 With MetaMask plugin in chrome wallet.ethereum.org runs inside Chrome
 
-#### Run mist with private net on Mac
+#### Run mist with private net on Mac OSX
+* create a chaindata folder
+```
+mkdir chaindata
+```
+* initalize geth with private genesis.json file
+```
+geth --datadir=./chaindata/ init ./genesis.jso
+```
 * run geth with private net
 ```
-geth --datadir=....
+geth --datadir=./chaindata/ console --rpc --rpccorsdomain "*"
 ```
 * run mist to use private net
 ```
 /Applications/Mist.app/Contents/MacOS/Mist --rpc /Users/fabien/Code/privateEth/chaindata/geth.ipc --node-networkid 1234 --node-datadir ~/Library/Ethereum/privatenet
+```
+* create an identity that the websites will interact with 
+
+* attach another geth to the ipc file
+```
+geth attach ipc:/Users/fabien/Code/privateEth/chaindata/geth.ipc
+```
+* start mining / stop mining
+```javascript
+miner.start(1);
+miner.stop();
 ```
