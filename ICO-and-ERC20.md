@@ -36,3 +36,13 @@ An ICO is just deploying a smart contract.
 People will buy token in exchange for ether and the owner owns ether.
 
 [ERC20 token wiki](https://theethereum.wiki/w/index.php/ERC20_Token_Standard)
+
+### Start ganache-cli to start debugging fixed supply token
+```
+ganache-cli -m "weasel champion mountain carry number spawn tissue ten basic mom ritual mechanic"
+/Applications/Mist.app/Contents/MacOS/Mist --rpc http://localhost:8545
+```
+Notes *(with Mist v0.10.0)*
+* The debugger works only with JavaScript VM
+* The addresses in the function parameter need to be double quoted
+* The contract caller is the address selected in the account dropdown list
