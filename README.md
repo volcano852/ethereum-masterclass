@@ -6,6 +6,8 @@
 3. [Distributed exchange](3.Distributed-exchange.md)
 4. [Solidity security](4.Solidity-security.md)
     - [```Address.send```, ```Address.call``` & ```Address.transfer``` functions solidity examples](SendCallAndTransfer.sol)
+    - [```assert```, ```require``` exceptions style](AssertRequireExceptions.sol)
+    - [Exceptions betweens contracts](ExceptionsBetweenContracts.sol)
 
 ## Useful links
 - https://ethstats.net/
