@@ -14,3 +14,4 @@
 - [Call vs CallCode vs DelegateCall](https://ethereum.stackexchange.com/questions/3667/difference-between-call-callcode-and-delegatecall)
 - [Solidity patterns](https://fravoll.github.io/solidity-patterns/)
 - [Coinsec podcast](http://coinsecpodcast.com/)
+- [Revert, assert, require on medium](https://medium.com/blockchannel/the-use-of-revert-assert-and-require-in-solidity-and-the-new-revert-opcode-in-the-evm-1a3a7990e06e)
