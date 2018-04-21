@@ -12,3 +12,5 @@
 - https://ethgasstation.info/
 - [Consensys smart contract best practices / known attacks](https://consensys.github.io/smart-contract-best-practices/known_attacks/)
 - [Call vs CallCode vs DelegateCall](https://ethereum.stackexchange.com/questions/3667/difference-between-call-callcode-and-delegatecall)
+- [Solidity patterns](https://fravoll.github.io/solidity-patterns/)
+- [Coinsec podcast](http://coinsecpodcast.com/)
