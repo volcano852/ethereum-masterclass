@@ -10,3 +10,5 @@
 ## Useful links
 - https://ethstats.net/
 - https://ethgasstation.info/
+- [Consensys smart contract best practices / known attacks](https://consensys.github.io/smart-contract-best-practices/known_attacks/)
+- [Call vs CallCode vs DelegateCall](https://ethereum.stackexchange.com/questions/3667/difference-between-call-callcode-and-delegatecall)
