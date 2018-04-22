@@ -1,3 +1,5 @@
+pragma solidity ^0.4.21;
+
 import './FixedSupplyToken.sol';
 
 contract Exchange is Owned {
