@@ -1,4 +1,5 @@
-# [Udemy Ethereum Masterclass](https://www.udemy.com/ethereum-masterclass/)
+# [Udemy Ethereum Masterclass](https://www.udemy.com/ethereum-masterclass/) 
+[_github of the instructor_](https://github.com/tomw1808)
 
 
 1. [Basic of blockchain development](1.Basics-of-blockchain-development.md)
