@@ -83,8 +83,9 @@ contract Exchange is Owned {
         
     }
     
-    function hasToken(string symbolName) constant returns (bool) {
-        
+    function hasToken(string symbolName) public constant returns (bool) {
+        uint8 index = getSymbolIndex(symbolName); 
+        return (index > 0);
     }
     
     function getSymbolIndex(string symbolName) internal returns (uint8) {
