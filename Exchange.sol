@@ -79,8 +79,13 @@ contract Exchange is Owned {
     ////////////////////////
     
     // Only admin function
-    function addToken(string symbolName,address tokenAddress) onlyOwner {
+    function addToken(string symbolName,address tokenContract) public onlyOwner {
+        require(! hasToken(symbolName));
+        require(tokenIndex < 255);
         
+        tokenIndex ++;
+        tokens[tokenIndex].symbolName = symbolName;
+        tokens[tokenIndex].tokenContract = tokenContract;
     }
     
     function hasToken(string symbolName) public constant returns (bool) {
