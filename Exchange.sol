@@ -88,7 +88,28 @@ contract Exchange is Owned {
     }
     
     function getSymbolIndex(string symbolName) internal returns (uint8) {
+        for (uint8 i = 1; i <= tokenIndex; i++) {
+            Token storage token = tokens[i];
+            if (stringsEqual(symbolName,token.symbolName)) {
+                return i;
+            }
+        }
+        return 0;
+    }
+    
+    function stringsEqual(string memory strA,string storage strB) internal returns (bool) {
+        bytes memory strA_bytes = bytes(strA);
+        bytes storage strB_bytes = bytes(strB);
         
+        if (strB_bytes.length != strB_bytes.length) {
+            return false;
+        }
+        for (uint8 i= 0; i < strA_bytes.length; i++) {
+            if (strA_bytes[i] != strB_bytes[i]) {
+                return false;
+            }
+        }
+        return true;
     }
     
     
